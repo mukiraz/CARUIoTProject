@@ -1,0 +1,19 @@
+schema {
+  query: Query
+  mutation: Mutation
+}
+
+type Mutation {
+  createDeviceData(deviceId: String!, temperature: Float!, humidity: Float!, timestamp: String!): DeviceData
+}
+
+type Query {
+  getDeviceData(deviceId: String!): DeviceData
+}
+
+type DeviceData {
+  deviceId: String!
+  temperature: Float!
+  humidity: Float!
+  timestamp: String!
+}
